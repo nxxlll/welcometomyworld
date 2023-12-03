@@ -3,9 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
 function App() {
   const [count, setCount] = useState(0)
-
+  // console.log("ya", ya);
+  console.log("import.meta.env", import.meta.env);
+  console.log("Host", import.meta.env.VITE_HOST);
   return (
     <>
       <div>
@@ -16,7 +19,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite + React {import.meta.env.VITE_HOST} s</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
